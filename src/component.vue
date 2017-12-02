@@ -16,7 +16,7 @@ export default {
   props: {
     value: {
       required: true,
-      type: [Number, String],
+      //type: [Number, String],
       default: 0
     },
     masked: {
@@ -57,6 +57,9 @@ export default {
     value: {
       immediate: true,
       handler (newValue, oldValue) {
+        if (!newValue) {
+          newValue = 0;
+        }
         var formatted = format(newValue, this.$props)
         if (formatted !== this.formattedValue) {
           this.formattedValue = formatted

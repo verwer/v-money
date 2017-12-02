@@ -110,7 +110,7 @@ Vue.use(vuetify)
 export default {
   data () {
     return {
-      price: 1234.5,
+      price: null,
       priceDirective: 5432.1,
       priceVuetify: 6789.10,
       config: {decimal: ',', thousands: '.', prefix: 'R$ ', suffix: ' #', precision: 2, masked: false}
